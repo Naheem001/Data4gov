@@ -1,8 +1,0 @@
-latitude,longitude,altitude,geometry,geometry_type,global_id,name,police_station,ambulance,fire_station,fire_vehicle,fire_personel,service_type,functional_fire_vehicle,ward_code,source,ward_name,lga_code,lga_name,state_code,state_name
-6.4496,3.3414,,Point,POINT,25fb0915-001e-46e3-878d-f455d398fc72,Lagos State Ambulance Service,,Yes,,,,Ambulance,,LASATO13,GRID,Oluwa/Akere,25002,Ajeromi/Ifelodun,LA,Lagos
-6.6128,3.359,,Point,POINT,52fd6665-cb3f-47fc-943f-947043ef06d5,Lagos State Fire Service Headquarters Alausa,,,Yes,,,Fire Station,,LASIKA04,GRID,Alausa,25011,Ikeja,LA,Lagos
-6.5917,3.3405,,Point,POINT,c0a376da-7c22-4010-9fce-3cd1aaa931b4,Lagos State Fire Services,,,Yes,,,Fire Station,,LASIKA05,GRID,Anifowoshe,25011,Ikeja,LA,Lagos
-6.5645,3.3489,,Point,POINT,47322f54-0ab8-4ca1-961c-55b91adc8234,Arena Fire Station,,,Yes,,,Fire Station,,LASIKA12,GRID,Onigbongbo,25011,Ikeja,LA,Lagos
-6.5188,3.3961,,Point,POINT,6e9d5298-7a65-4948-9af8-6292b86e4383,Unilag Fire Station,,,Yes,3,,Fire Station,3,LASLMD02,GRID,Abule Oja,25019,Lagos Mainland,LA,Lagos
-6.4823,3.381,,Point,POINT,681f3ce0-2ee2-452a-a0a6-60d02571df54,Federal Fire Service Station Ebute Meta,,,Yes,2,,Fire Station,2,LASLMD11,GRID,Iponri/Olaleye,25019,Lagos Mainland,LA,Lagos
-6.4514,3.3943,,Point,POINT,9bccfb1f-c4ef-4a12-bd30-9d41966f23b6,Federal Fire Station Campos Ajele,,,Yes,10,,Fire Station,3,LASLID01,GRID,Ajele,25020,Lagos Island,LA,Lagos

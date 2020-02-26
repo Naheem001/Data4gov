@@ -16,7 +16,7 @@
 
 <body>
     <div class="NavBg">
-        <img src="img/globe-line.gif" class="imgAttribute" alt="Your Image here">
+        <img src="/Data4gov/img/globe-line.gif" class="imgAttribute" alt="Your Image here">
         <a class="nav-item nav-link inker1" href="#">Synergius</a>
         <a class="nav-item nav-link inker0" href="Directions.html">Directions<span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link inker" href="#mapsvalue">Data Visualisation<span
@@ -72,8 +72,21 @@
         <div class="container">
             <div class="chart">
                 <canvas id="myChart2" width="100px" height="100px"></canvas>
-                <div class="infospace" style="top:50px">
-                    Road traffic crashes is caused by a number of reasons. Sometimes it is caused as a result of absence of effective transportplanning, vehicle-misuse, poor management, inadequate street parking,traffic congestion, delays and accidents among other contributory factors.Road Traffic Accidents are a major cause of morbidity and mortalityworldwide, but especially in low-and middle-income countries. The WorldHealth Organization estimates that more than 3000 people are killed everyday in road traffic accidents globally, with at least 30,000 others injured ordisabled.
+                <div class="infospace" id="infowords" style="top:50px">
+                    Causative Factors of Road Traffic Crashes in Lagos
+                    Road traffic crashes is caused by a number of reasons. Sometimes it is caused as a result of absence of effective transport planning, vehicle-misuse, poor management, inadequate street parking, traffic congestion, delays and accidents among other contributory factors. Road Traffic Accidents are a major cause of morbidity and mortality worldwide, but especially in low-and middle-income countries. The World Health Organization estimates that more than 3000 people are killed every day in road traffic accidents globally, with at least 30,000 others injured or disabled. 
+                    According to National Bureau of Statistics, 53.2% of road crashes in Lagos state in 2018 was caused by Speed Violation. An indication that high number of vehicle drivers violates the prescribed speed rate. A call to action to further enforce the law.
+                    TBT - Tyre Burst 
+                    MDV - Mechanically Deficient Vehicle
+                    BFL - Brake Failure
+                    OVL – Overloading
+                    WOT – Wrongful Overtaking
+                    DGD - Dangerous Driving
+                    RTV -Route Valuation
+                    SOS - Sleeping on Steering
+                    DAD - Driving Under Alcohol or Drug Influence
+                    Source: NBS
+                    
                 </div>
                     <canvas id="backall"></canvas>
                 
@@ -86,6 +99,12 @@
         <div class="container">
             <div class="chart">
                 <canvas id="myChart" width="20px" height="20px"></canvas>
+                <div class="infospace" id="infowords1" style="top:50px">
+                    Road Traffic Accidents in Ikeja, Lagos Island, Lagos Mainland and Ajeromi Ifelodun.
+                    A deeper look into the traffic accidents that occurred in the four major local government in Lagos State indicates that the rate of accidents increases as the population in each local government increases. The increase in population directly leads to an increase in the number of pedestrians on the road. The fact that this affects accidents rate may be an indication that there is little or no infrastructure that caters for pedestrians on the road and in fact maybe they are exposed to roads when walking by or crossing. Lagos Island as shown in the graph has the highest number of traffic crashes over the years while Ajeromi Ifelodun has the lowest number of traffic crashes.
+                    Source: Road Traffic Accident Variations in Lagos State, Nigeria: A
+                    Synopsis of Variance Spectra
+                </div>
                 <canvas id="backall"></canvas>
             </div>
         </div>
@@ -93,27 +112,37 @@
         <div class="container">
             <div class="chart">
                 <canvas id="myChart1" width="400" height="400"></canvas>
+                <div class="infospace" id="infowords3" style="top:50px">
+                    The prediction of the road traffic accidents in Ikeja shows a sinusoidal movement if all conditions remain the same, the number of traffic crashes will remain under 480 over the period and might fall to 448 by 2025.</div>
             </div>
         </div>
         <!-- Predicting Number of Accidents in Lagos Island Local Government from 2010 till 2025 -->
         <div class="container" style="padding-top: 300px">
             <div class="chart">
                 <canvas id="myChart3" width="400" height="400"></canvas>
+                <div class="infospace" id="infowords5" style="top:50px">
+                    Predicting Number of Accidents in Lagos Island Local Government from 2010 – 2025
+                    The prediction of the road traffic accidents in Lagos Island shows a continuous increase in traffic accidents if all conditions remain the same, the number of traffic crashes will reach 607 by 2025.                    
+                </div>
             </div>
         </div>
         <!-- Predicting Number of Accidents in Lagos Mainland Local Government from 2010 till 2025 -->
         <div class="container" style="padding-top: 300px">
             <div class="chart">
                 <canvas id="myChart4" width="400" height="400"></canvas>
+                <div class="infospace" id="infowords2" style="top:50px">
+                    The prediction of the road traffic accidents in Lagos Mainland also shows a continuous increase in traffic accidents if all conditions remain the same, the number of traffic crashes will reach 595 by 2025.
+                </div>
             </div>
         </div>
         <!-- Predicting Number of Accidents in Ajeromi Ifelodun Local Government from 2010 till 2025 -->
         <div class="container" style="padding-top: 300px">
             <div class="chart">
-                <h4>Info Page</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laboriosam natus laudantium? Ad qui odio consequuntur facere aperiam doloribus vitae tempore praesentium numquam! Quasi quia assumenda ullam nulla culpa sint.</p>
-            
                 <canvas id="myChart5" width="400" height="400"></canvas>
+                <div class="infospace" id="infowords4" style="top:50px">
+                    Predicting Number of Accidents in Ajeromi Ifelodun Local Government from 2010 – 2025
+                    The prediction of the road traffic accidents in Ajeromi Ifelodun shows that if all conditions remain the same, the number of traffic crashes will continuously increase with a spike to about 701 accidents in 2025.                    
+                </div>
                 </div>
         </div>
 
@@ -125,6 +154,7 @@
     <script>
         function Causative() {
             document.getElementById("myChart2").style.display = 'block'
+            document.getElementById("infowords").style.display = 'block'
             var ctx = document.getElementById('myChart2').getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'horizontalBar',
@@ -166,12 +196,14 @@
         }
         function CloseModal() {
             document.getElementById('myChart2').style.display = 'none'
+            document.getElementById("infowords").style.display = 'none'
         }
     </script>
     <!-- Lgas script -->
     <script>
         function Lgas() {
             var ctx = document.getElementById('myChart');
+            document.getElementById('infowords1').style.display = 'block'
             document.getElementById('myChart').style.display = 'block'
             var mixedChart = new Chart(ctx, {
                 type: 'line',
@@ -230,6 +262,7 @@
         }
         function CloseModal2() {
             document.getElementById('myChart').style.display = 'none'
+            document.getElementById('infowords1').style.display = 'none'
         }
     </script>
     <!-- ikeja prediction -->
@@ -237,6 +270,7 @@
         function ikeja() {
             var ctx = document.getElementById('myChart1').getContext('2d');
             document.getElementById('myChart1').style.display = 'block'
+            document.getElementById('infowords3').style.display = 'block'
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -266,6 +300,7 @@
         }
         function CloseModal1() {
             document.getElementById('myChart1').style.display = 'none'
+            document.getElementById('infowords3').style.display = 'none'
         }
     </script>
     <!-- Lagos-Island prediction -->
@@ -273,6 +308,7 @@
         function LagosIsland() {
             var ctx = document.getElementById('myChart3').getContext('2d');
             document.getElementById('myChart3').style.display = 'block'
+            document.getElementById('infowords5').style.display = 'block'
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -302,6 +338,7 @@
         }
         function CloseModal3() {
             document.getElementById('myChart3').style.display = 'none'
+            document.getElementById('infowords5').style.display = 'none'
         }
     </script>
    <!-- Lagos-Mainland prediction -->
@@ -309,6 +346,7 @@
        function LagosMainland(){
     var ctx = document.getElementById('myChart4').getContext('2d');
     document.getElementById('myChart4').style.display="block"
+    document.getElementById('infowords2').style.display="block"
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -338,6 +376,7 @@
 }
 function CloseModal4() {
     document.getElementById('myChart4').style.display = 'none'
+    document.getElementById('infowords2').style.display="none"
 }
     </script>
 <!-- Ajeromi-ifelodun prediction -->
@@ -345,6 +384,7 @@ function CloseModal4() {
     function Ajeromi(){   
     var ctx = document.getElementById('myChart5').getContext('2d');
     document.getElementById('myChart5').style.display ='block';
+    document.getElementById('infowords4').style.display ='block';
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -374,6 +414,7 @@ function CloseModal4() {
 }
 function CloseModal5() {
     document.getElementById('myChart5').style.display = 'none'
+    document.getElementById('infowords4').style.display ='none';
 }
     </script>
 
@@ -406,7 +447,72 @@ function CloseModal5() {
             bottom: 0;
             margin-bottom: -15px;
         }
-
+        #infowords{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
+        #infowords1{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
+        #infowords2{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
+        #infowords3{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
+        #infowords4{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
+        #infowords5{
+            display: none;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            left: 390px;
+            background-color:rgba(0, 0, 0, 0.514);
+            padding: 16px;
+            color: white;
+            
+        }
         .container {
             padding-top: 300px;
             background-color: white;
@@ -662,9 +768,6 @@ function CloseModal5() {
             width: 200px;
         }
 
-        .openmodal {
-            display: none;
-        }
     </style>
 
 
